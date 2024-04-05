@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RobotWidget</class>
+ <widget class="QWidget" name="RobotWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>551</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>RobotWidget</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_13">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_11">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="btn_set_init_pos">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover{
+background-color:rgb(186, 189, 182);
+border-bottom:2px solid rgb(67, 154, 246);
+}
+QPushButton:checked{
+background-color:cyan;
+border-bottom:2px solid white 
+}
+QPushButton:pressed{
+background-color:rgb(67, 154, 246)
+}
+QPushButton{
+background-color:rgb(238, 238, 236);
+border:none; 
+padding:0px 0px 0px 0px;
+margin:0px 0px 0px 0px;
+}</string>
+         </property>
+         <property name="text">
+          <string>设置导航初始点</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/images/classes/SetInitialPose.png</normaloff>:/images/classes/SetInitialPose.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_set_single_goal">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover{
+background-color:rgb(186, 189, 182);
+border-bottom:2px solid rgb(67, 154, 246);
+}
+QPushButton:checked{
+background-color:cyan;
+border-bottom:2px solid white 
+}
+QPushButton:pressed{
+background-color:rgb(67, 154, 246)
+}
+QPushButton{
+background-color:rgb(238, 238, 236);
+border:none; 
+padding:0px 0px 0px 0px;
+margin:0px 0px 0px 0px;
+}</string>
+         </property>
+         <property name="text">
+          <string>设置单点导航</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/images/classes/SetGoal.png</normaloff>:/images/classes/SetGoal.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_set_mutil_goal">
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover{
+background-color:rgb(186, 189, 182);
+border-bottom:2px solid rgb(67, 154, 246);
+}
+QPushButton:checked{
+background-color:cyan;
+border-bottom:2px solid white 
+}
+QPushButton:pressed{
+background-color:rgb(67, 154, 246)
+}
+QPushButton{
+background-color:rgb(238, 238, 236);
+border:none; 
+padding:0px 0px 0px 0px;
+margin:0px 0px 0px 0px;
+}</string>
+         </property>
+         <property name="text">
+          <string>设置多点导航</string>
+         </property>
+         <property name="icon">
+          <iconset theme="://images/set_mutil_pose.png">
+           <normaloff>../../robot_viewer/src/robot_viewer/src</normaloff>../../robot_viewer/src/robot_viewer/src</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_set_break_goal">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover{
+background-color:rgb(186, 189, 182);
+border-bottom:2px solid rgb(67, 154, 246);
+}
+QPushButton:checked{
+background-color:cyan;
+border-bottom:2px solid white 
+}
+QPushButton:pressed{
+background-color:rgb(67, 154, 246)
+}
+QPushButton{
+background-color:rgb(238, 238, 236);
+border:none; 
+padding:0px 0px 0px 0px;
+margin:0px 0px 0px 0px;
+}</string>
+         </property>
+         <property name="text">
+          <string>返回休息点</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/images/set_return.png</normaloff>:/images/set_return.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_map_type">
+         <property name="text">
+          <string>样式：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="cbx_map_type">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:none</string>
+         </property>
+         <property name="editable">
+          <bool>false</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string>经典</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Rviz</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_build_map">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QGraphicsView" name="mapViz">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QGraphicsView{
+border-top: 5px solid qlineargradient(y0:0, y1:1,stop: 0 #ececef, stop: 1 white);
+border-left: 5px solid qlineargradient(x0:0, x1:1,stop: 0 #ececef, stop: 1 white);
+ border-bottom: 5px solid qlineargradient(y0:0, y1:1,stop: 0 white, stop: 1  #ececef);
+border-right: 5px solid qlineargradient(x0:0, x1:1,stop:  0 white, stop: 1 #ececef);
+background-color: rgb(255,255,255);
+}
+</string>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_rviz" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget{
+border-top: 5px solid qlineargradient(y0:0, y1:1,stop: 0 #ececef, stop: 1 white);
+border-left: 5px solid qlineargradient(x0:0, x1:1,stop: 0 #ececef, stop: 1 white);
+ border-bottom: 5px solid qlineargradient(y0:0, y1:1,stop: 0 white, stop: 1  #ececef);
+border-right: 5px solid qlineargradient(x0:0, x1:1,stop:  0 white, stop: 1 #ececef);
+background-color: rgb(255,255,255);
+}
+</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_16">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_rviz"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_12">
+       <item>
+        <widget class="QLabel" name="label_map">
+         <property name="minimumSize">
+          <size>
+           <width>35</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>35</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>map:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_pos_map">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_scene">
+         <property name="minimumSize">
+          <size>
+           <width>45</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>45</width>
+           <height>18</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>scene:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_pos_scene">
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>160</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
